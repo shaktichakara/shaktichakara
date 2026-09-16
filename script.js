@@ -1,0 +1,3 @@
+
+const targetDate=new Date('2026-10-11T19:00:00+05:30').getTime();
+function updateCountdown(){const d=Math.max(0,targetDate-Date.now());const day=Math.floor(d/86400000),hour=Math.floor(d%86400000/3600000),min=Math.floor(d%3600000/60000),sec=Math.floor(d%60000/1000);document.getElementById('cdDays').textContent=String(day).padStart(2,'0');document.getElementById('cdHours').textContent=String(hour).padStart(2,'0');document.getElementById('cdMinutes').textContent=String(min).padStart(2,'0');document.getElementById('cdSeconds').textContent=String(sec).padStart(2,'0')}updateCountdown();setInterval(updateCountdown,1000);
